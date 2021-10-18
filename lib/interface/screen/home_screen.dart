@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/who_page.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
+import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String route = "/homeScreen";
@@ -19,7 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(References.appName)),
+      appBar: NewGradientAppBar(
+        title: Text(References.appName.toUpperCase()),
+        gradient: References.appBarGradient,
+        centerTitle: true,
+      ),
       body: buildBody(),
       drawer: buildDrawer(),
       floatingActionButton: FloatingActionButton(
@@ -41,43 +47,47 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget buildDrawer() {
-    return Drawer(
+    return SizedBox(
+      width: MediaQuery.of(context).size.width / 5 * 2,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          DrawerHeader(
-            child: Center(
-              child: Text(
-                "Orler: gallerie d\'arte dal 1958",
-                style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    "https://www.orler.it/orlertv/wp-content/uploads/2015/01/65_Vasarely-Victor-180x180-1969.jpg"),
-                fit: BoxFit.cover,
-              ),
-            ),
+          SizedBox(
+            height: AppBar().preferredSize.height + MediaQuery.of(context).viewPadding.top,
           ),
-          ListView(
-            padding: EdgeInsets.zero,
-            shrinkWrap: true,
-            children: [
-              ListTile(
-                title: const Text("Home"),
-                onTap: () => goToPage(0),
+          Expanded(
+            child: Drawer(
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image(
+                    image: Images.splashWallpaper,
+                    fit: BoxFit.cover,
+                    alignment: AlignmentDirectional.centerEnd,
+                  ),
+                  Column(
+                    children: [
+                      ListTile(
+                        title: const Text("Home", style: TextStyle(color: Colors.white)),
+                        onTap: () => goToPage(0),
+                      ),
+                      ListTile(
+                        title: const Text("Contatti", style: TextStyle(color: Colors.white)),
+                        onTap: () => goToPage(1),
+                      ),
+                      ListTile(
+                        title: const Text("Chi siamo", style: TextStyle(color: Colors.white)),
+                        onTap: () => goToPage(2),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Image(image: Images.logo),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              ListTile(
-                title: const Text("Contatti"),
-                onTap: () => goToPage(1),
-              ),
-              ListTile(
-                title: const Text("Chi siamo"),
-                onTap: () => goToPage(2),
-              ),
-            ],
+            ),
           ),
         ],
       ),

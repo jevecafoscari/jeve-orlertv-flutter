@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
       color: Colors.black,
       child: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           if (initialized)
             VisibilityDetector(
               key: UniqueKey(),
@@ -50,20 +50,7 @@ class _HomePageState extends State<HomePage> {
                 child: SizedBox.fromSize(size: videoPlayerController.value.size, child: VideoPlayer(videoPlayerController)),
               ),
             ),
-          Spacer(),
-          if(false)Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    child: Text("Chiama"),
-                    onPressed: () => launch("tel:${References.phoneNumber}"),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          const Spacer(),
         ],
       ),
     );
