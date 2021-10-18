@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/interface/screen/home_screen.dart';
+import 'package:jeve_orlertv_flutter/interface/screen/splash_screen.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
 
 void main() {
@@ -17,9 +18,10 @@ class OrlerTV extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      initialRoute: HomeScreen.route,
+      initialRoute: SplashScreen.route,
       routes: <String, Widget Function(BuildContext)>{
-        HomeScreen.route: (BuildContext context) => HomeScreen(),
+        HomeScreen.route: (BuildContext context) => const HomeScreen(),
+        SplashScreen.route: (BuildContext context) => const SplashScreen(),
       },
     );
   }

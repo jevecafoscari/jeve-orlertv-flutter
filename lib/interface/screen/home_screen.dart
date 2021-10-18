@@ -7,6 +7,8 @@ import 'package:jeve_orlertv_flutter/references.dart';
 class HomeScreen extends StatefulWidget {
   static const String route = "/homeScreen";
 
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -17,9 +19,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(References.appName)),
+      appBar: AppBar(title: const Text(References.appName)),
       body: buildBody(),
       drawer: buildDrawer(),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.phone),
+        onPressed: () {},
+      ),
     );
   }
 
@@ -27,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return IndexedStack(
       index: pageIndex,
       children: [
-        HomePage(),
+        const HomePage(),
         ContactPage(),
         WhoPage(),
       ],
@@ -49,7 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage("https://www.orler.it/orlertv/wp-content/uploads/2015/01/65_Vasarely-Victor-180x180-1969.jpg"),
+                image: NetworkImage(
+                    "https://www.orler.it/orlertv/wp-content/uploads/2015/01/65_Vasarely-Victor-180x180-1969.jpg"),
                 fit: BoxFit.cover,
               ),
             ),

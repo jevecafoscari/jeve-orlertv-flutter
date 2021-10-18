@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           Spacer(),
-          Row(
+          if(false)Row(
             children: [
               Expanded(
                 child: Padding(
