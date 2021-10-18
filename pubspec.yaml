@@ -26,6 +26,8 @@ dependencies:
   # Grafica
   cupertino_icons: ^1.0.3
   new_gradient_app_bar: ^0.2.0
+  # google_fonts: ^2.1.0
+  swatcher: ^0.1.0
 
 
 dev_dependencies:
@@ -44,3 +46,4 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/fonts/montserrat/

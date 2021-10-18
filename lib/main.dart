@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/interface/screen/home_screen.dart';
 import 'package:jeve_orlertv_flutter/interface/screen/splash_screen.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
+import 'package:swatcher/swatcher.dart';
 
 void main() {
   runApp(const OrlerTV());
@@ -16,7 +17,8 @@ class OrlerTV extends StatelessWidget {
     return MaterialApp(
       title: References.appName,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Swatcher.createMaterialColor(References.orlerBlue),
+        fontFamily: "Montserrat",
       ),
       initialRoute: SplashScreen.route,
       routes: <String, Widget Function(BuildContext)>{

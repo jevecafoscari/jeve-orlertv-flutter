@@ -22,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NewGradientAppBar(
-        title: Text(References.appName.toUpperCase()),
+        title: Text(
+          References.appName.toUpperCase(),
+          style: const TextStyle(fontWeight: FontWeight.w300),
+        ),
         gradient: References.appBarGradient,
         centerTitle: true,
       ),
@@ -46,6 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  TextStyle drawerOptionsTextStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
+
   Widget buildDrawer() {
     return SizedBox(
       width: MediaQuery.of(context).size.width / 5 * 2,
@@ -67,15 +72,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       ListTile(
-                        title: const Text("Home", style: TextStyle(color: Colors.white)),
+                        title: Text("Home", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(0),
                       ),
                       ListTile(
-                        title: const Text("Contatti", style: TextStyle(color: Colors.white)),
+                        title: Text("Contatti", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(1),
                       ),
                       ListTile(
-                        title: const Text("Chi siamo", style: TextStyle(color: Colors.white)),
+                        title: Text("Chi siamo", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(2),
                       ),
                       Spacer(),
