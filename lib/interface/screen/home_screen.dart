@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  TextStyle drawerOptionsTextStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
+  static const TextStyle drawerOptionsTextStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
 
   Widget buildDrawer() {
     return SizedBox(
@@ -72,18 +72,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       ListTile(
-                        title: Text("Home", style: drawerOptionsTextStyle),
+                        title: const Text("Home", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(0),
                       ),
                       ListTile(
-                        title: Text("Contatti", style: drawerOptionsTextStyle),
+                        title: const Text("Contatti", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(1),
                       ),
                       ListTile(
-                        title: Text("Chi siamo", style: drawerOptionsTextStyle),
+                        title: const Text("Chi siamo", style: drawerOptionsTextStyle),
                         onTap: () => goToPage(2),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Image(image: Images.logo),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final VideoPlayerController videoPlayerController = VideoPlayerController.network(References.streamUrl);
+  final VideoPlayerController videoPlayerController =
+      VideoPlayerController.network(References.streamUrl);
 
   bool initialized = false;
 
@@ -26,13 +27,16 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  static const TextStyle hintTextStyle = TextStyle(fontSize: 18.0);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      decoration: BoxDecoration(
+        image: DecorationImage(image: Images.marble, fit: BoxFit.cover),
+      ),
       child: Column(
         children: [
-          const Spacer(),
           if (initialized)
             VisibilityDetector(
               key: UniqueKey(),
@@ -45,12 +49,31 @@ class _HomePageState extends State<HomePage> {
                   }
                 }
               },
-              child: FittedBox(
-                fit: BoxFit.contain,
-                child: SizedBox.fromSize(size: videoPlayerController.value.size, child: VideoPlayer(videoPlayerController)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: SizedBox.fromSize(
+                      size: videoPlayerController.value.size,
+                      child: VideoPlayer(videoPlayerController)),
+                ),
               ),
             ),
-          const Spacer(),
+          Expanded(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("ORLER TV - LIVE Streaming",
+                    style: hintTextStyle.copyWith(fontWeight: FontWeight.bold)),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                  child: Text("Canale 144 del Digitale Terrestre", style: hintTextStyle),
+                ),
+                Text("Sky 867", style: hintTextStyle),
+              ],
+            ),
+          ),
         ],
       ),
     );
