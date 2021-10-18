@@ -4,6 +4,7 @@ import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/who_page.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
+import 'package:jeve_orlertv_flutter/resources/helper/launch_helper.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,9 +32,27 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: buildBody(),
       drawer: buildDrawer(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.phone),
-        onPressed: () {},
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: References.appBarGradient,
+            borderRadius: BorderRadius.all(Radius.circular(16.0)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Icon(pageIndex == 0 ? Icons.phone : Icons.tv),
+          ),
+        ),
+        onPressed: () {
+          switch (pageIndex) {
+            case 0:
+              LaunchHelper.callPhone(References.phoneNumber);
+              break;
+            default:
+              setState(() => pageIndex = 0);
+          }
+        },
       ),
     );
   }
@@ -49,7 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  static const TextStyle drawerOptionsTextStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
+  static const TextStyle drawerOptionsTextStyle =
+      TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
 
   Widget buildDrawer() {
     return SizedBox(

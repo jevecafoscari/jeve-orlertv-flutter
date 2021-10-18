@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           Expanded(
+            flex: 2,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -74,6 +75,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          Spacer(),
         ],
       ),
     );
