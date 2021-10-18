@@ -89,26 +89,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     fit: BoxFit.cover,
                     alignment: AlignmentDirectional.centerEnd,
                   ),
-                  Column(
-                    children: [
-                      ListTile(
-                        title: const Text("Home", style: drawerOptionsTextStyle),
-                        onTap: () => goToPage(0),
-                      ),
-                      ListTile(
-                        title: const Text("Contatti", style: drawerOptionsTextStyle),
-                        onTap: () => goToPage(1),
-                      ),
-                      ListTile(
-                        title: const Text("Chi siamo", style: drawerOptionsTextStyle),
-                        onTap: () => goToPage(2),
-                      ),
-                      const Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Image(image: Images.logo),
-                      ),
-                    ],
+                  SafeArea(
+                    top: false,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: const Text("Home", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(0),
+                        ),
+                        ListTile(
+                          title: const Text("Contatti", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(1),
+                        ),
+                        ListTile(
+                          title: const Text("Chi siamo", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(2),
+                        ),
+                        const Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Image(image: Images.logo),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
