@@ -65,15 +65,15 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text("ORLER TV - LIVE Streaming",
                     style: hintTextStyle.copyWith(fontWeight: FontWeight.bold)),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 24.0),
                   child: Text("Canale 144 del Digitale Terrestre", style: hintTextStyle),
                 ),
-                Text("Sky 867", style: hintTextStyle),
+                const Text("Sky 867", style: hintTextStyle),
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

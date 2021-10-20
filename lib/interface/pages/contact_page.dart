@@ -4,6 +4,8 @@ import 'package:jeve_orlertv_flutter/interface/widget/contact_list_element.dart'
 import 'package:jeve_orlertv_flutter/references.dart';
 
 class ContactPage extends StatelessWidget {
+  const ContactPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(

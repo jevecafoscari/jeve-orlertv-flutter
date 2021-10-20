@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class WhoPage extends StatelessWidget {
+  const WhoPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(16.0),
-      children: [
+      padding: const EdgeInsets.all(16.0),
+      children: const <Widget>[
         Text(
           "A metà degli anni Cinquanta, poco più che ragazzo, Ermanno Orler decise di lasciare il suo paese natale (mezzano di Primiero) per andare in Francia a fare il boscaiolo."
           "Successivamente decide di spostarsi a Venezia, dove lavorava come artista già suo fratello Davide, e dove avrà inizio la loro e la Sua carriera. Corre l’anno 1958."

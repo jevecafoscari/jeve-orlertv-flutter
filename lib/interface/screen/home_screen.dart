@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (BuildContext context, Orientation orientation) {
         switch (orientation) {
           case Orientation.landscape:
-            return FullscreenVideoPlayer();
+            return const FullscreenVideoPlayer();
           case Orientation.portrait:
             return Scaffold(
               appBar: NewGradientAppBar(
@@ -71,8 +71,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildBody() {
     return IndexedStack(
       index: pageIndex,
-      children: [
-        const HomePage(),
+      children: const [
+        HomePage(),
         ContactPage(),
         WhoPage(),
       ],

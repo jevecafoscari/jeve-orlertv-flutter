@@ -4,6 +4,8 @@ import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class FullscreenVideoPlayer extends StatefulWidget {
+  const FullscreenVideoPlayer({Key? key}) : super(key: key);
+
   @override
   State<FullscreenVideoPlayer> createState() => _FullscreenVideoPlayerState();
 }

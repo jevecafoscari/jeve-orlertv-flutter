@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/models/contact_model.dart';
+import 'package:jeve_orlertv_flutter/models/gallery_model.dart';
 
 class References {
   static const String appName = "Orler TV";
@@ -39,6 +41,17 @@ class References {
       title: "Madonna di Campiglio",
       text:
           "c/o centro Rainalter\nTel.: +39 0465.442685\nPaolo Orler: +39 3389799736\nEmail: campiglio@orler.it\n\nAperta da luglio a settembre,\nda dicembre a Pasqua",
+    ),
+  ];
+
+  static List<GalleryModel> galleries = <GalleryModel>[
+    GalleryModel(
+      title: "Sede Centrale: Favaro Veneto",
+      images: <AssetImage>[
+        Images.favaro1,
+        Images.favaro2,
+        Images.favaro3,
+      ],
     ),
   ];
 }

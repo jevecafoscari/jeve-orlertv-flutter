@@ -44,12 +44,58 @@ class Assets {
 class Images {
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/icons/logo.png)
   static AssetImage get logo => const AssetImage("assets/icons/logo.png");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_1.jpg)
+  static AssetImage get abano1 => const AssetImage("assets/images/abano/abano_1.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_10.jpg)
+  static AssetImage get abano10 => const AssetImage("assets/images/abano/abano_10.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_11.jpg)
+  static AssetImage get abano11 => const AssetImage("assets/images/abano/abano_11.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_12.jpg)
+  static AssetImage get abano12 => const AssetImage("assets/images/abano/abano_12.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_13.jpg)
+  static AssetImage get abano13 => const AssetImage("assets/images/abano/abano_13.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_2.jpg)
+  static AssetImage get abano2 => const AssetImage("assets/images/abano/abano_2.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_3.jpg)
+  static AssetImage get abano3 => const AssetImage("assets/images/abano/abano_3.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_4.jpg)
+  static AssetImage get abano4 => const AssetImage("assets/images/abano/abano_4.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_5.jpg)
+  static AssetImage get abano5 => const AssetImage("assets/images/abano/abano_5.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_6.jpg)
+  static AssetImage get abano6 => const AssetImage("assets/images/abano/abano_6.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_7.jpg)
+  static AssetImage get abano7 => const AssetImage("assets/images/abano/abano_7.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_8.jpg)
+  static AssetImage get abano8 => const AssetImage("assets/images/abano/abano_8.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_9.jpg)
+  static AssetImage get abano9 => const AssetImage("assets/images/abano/abano_9.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_1.jpg)
+  static AssetImage get campiglio1 => const AssetImage("assets/images/campiglio/campiglio_1.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_2.jpg)
+  static AssetImage get campiglio2 => const AssetImage("assets/images/campiglio/campiglio_2.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_3.jpg)
+  static AssetImage get campiglio3 => const AssetImage("assets/images/campiglio/campiglio_3.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_4.jpg)
+  static AssetImage get campiglio4 => const AssetImage("assets/images/campiglio/campiglio_4.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_5.jpg)
+  static AssetImage get campiglio5 => const AssetImage("assets/images/campiglio/campiglio_5.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/campiglio/campiglio_6.jpg)
+  static AssetImage get campiglio6 => const AssetImage("assets/images/campiglio/campiglio_6.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/drawerBackground.jpg)
   static AssetImage get drawerBackground => const AssetImage("assets/images/drawerBackground.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/favaro/favaro_1.JPG)
+  static AssetImage get favaro1 => const AssetImage("assets/images/favaro/favaro_1.JPG");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/favaro/favaro_2.JPG)
+  static AssetImage get favaro2 => const AssetImage("assets/images/favaro/favaro_2.JPG");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/favaro/favaro_3.JPG)
+  static AssetImage get favaro3 => const AssetImage("assets/images/favaro/favaro_3.JPG");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/lines.jpg)
   static AssetImage get lines => const AssetImage("assets/images/lines.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/marble.jpg)
   static AssetImage get marble => const AssetImage("assets/images/marble.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/mestre/mestre_1.PNG)
+  static AssetImage get mestre1 => const AssetImage("assets/images/mestre/mestre_1.PNG");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/splashWallpaper.jpg)
   static AssetImage get splashWallpaper => const AssetImage("assets/images/splashWallpaper.jpg");
 }
