@@ -34,8 +34,14 @@ class _SplashScreenState extends State<SplashScreen> {
       fit: StackFit.expand,
       alignment: AlignmentDirectional.center,
       children: [
-        Image(image: Images.splashWallpaper, fit: BoxFit.cover),
-        Image(image: Images.logo),
+        Image(image: Images.splashWallpaper, fit: BoxFit.cover, alignment: AlignmentDirectional.centerStart),
+        Row(
+          children: [
+            const Spacer(),
+            Expanded(flex: 2, child: Image(image: Images.logo)),
+            const Spacer(),
+          ],
+        ),
       ],
     );
   }
