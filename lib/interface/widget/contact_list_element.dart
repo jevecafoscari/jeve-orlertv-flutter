@@ -18,9 +18,7 @@ class ContactListElement extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: odd
             ? null
-            : LinearGradient(
-                colors: <Color>[Colors.black.withOpacity(0.8), Colors.transparent],
-              ),
+            : LinearGradient(colors: <Color>[Colors.black.withOpacity(0.8), Colors.transparent]),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
