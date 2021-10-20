@@ -44,6 +44,8 @@ class Assets {
 class Images {
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/icons/logo.png)
   static AssetImage get logo => const AssetImage("assets/icons/logo.png");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/drawerBackground.jpg)
+  static AssetImage get drawerBackground => const AssetImage("assets/images/drawerBackground.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/lines.jpg)
   static AssetImage get lines => const AssetImage("assets/images/lines.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/marble.jpg)

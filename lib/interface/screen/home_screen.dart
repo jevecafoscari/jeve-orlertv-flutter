@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 fit: StackFit.expand,
                 children: [
                   Image(
-                    image: Images.splashWallpaper,
+                    image: Images.drawerBackground,
                     fit: BoxFit.cover,
                     alignment: AlignmentDirectional.centerEnd,
                   ),
