@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:jeve_orlertv_flutter/assets.dart';
+import 'package:jeve_orlertv_flutter/interface/widget/contact_list_element.dart';
+import 'package:jeve_orlertv_flutter/references.dart';
 
 class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Text("Lorem ipsum dolor sit amet."),
-      ],
+    return Container(
+      decoration: BoxDecoration(image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
+      child: ListView.builder(
+        itemCount: References.contacts.length,
+        itemBuilder: (BuildContext context, int index) => ContactListElement(
+          contactModel: References.contacts.elementAt(index),
+          odd: index % 2 == 0,
+        ),
+      ),
     );
   }
-
 }

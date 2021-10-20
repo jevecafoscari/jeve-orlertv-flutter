@@ -32,9 +32,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(image: Images.marble, fit: BoxFit.cover),
-      ),
+      decoration: BoxDecoration(image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
       child: Column(
         children: [
           if (initialized)
