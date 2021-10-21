@@ -53,5 +53,40 @@ class References {
         Images.favaro3,
       ],
     ),
+    GalleryModel(
+      title: "Galleria Abano Terme",
+      images: <AssetImage>[
+        Images.abano1,
+        Images.abano2,
+        Images.abano3,
+        Images.abano4,
+        Images.abano5,
+        Images.abano6,
+        Images.abano7,
+        Images.abano8,
+        Images.abano9,
+        Images.abano10,
+        Images.abano11,
+        Images.abano12,
+        Images.abano13,
+      ],
+    ),
+    GalleryModel(
+      title: "Galleria Madonna di Campiglio",
+      images: <AssetImage>[
+        Images.campiglio1,
+        Images.campiglio2,
+        Images.campiglio3,
+        Images.campiglio4,
+        Images.campiglio5,
+        Images.campiglio6,
+      ],
+    ),
+    GalleryModel(
+      title: "Galleria Mestre",
+      images: <AssetImage>[
+        Images.mestre1,
+      ],
+    ),
   ];
 }

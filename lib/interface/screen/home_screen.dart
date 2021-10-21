@@ -20,6 +20,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  static const List<String> pageNames = <String>[
+    "Orler TV",
+    "Contatti",
+    "Chi siamo",
+    "Gallerie",
+  ];
+
   int pageIndex = 1;
 
   @override
@@ -33,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return Scaffold(
               appBar: NewGradientAppBar(
                 title: Text(
-                  References.appName.toUpperCase(),
+                  pageNames.elementAt(pageIndex).toUpperCase(),
                   style: const TextStyle(fontWeight: FontWeight.w300),
                 ),
                 gradient: References.appBarGradient,
