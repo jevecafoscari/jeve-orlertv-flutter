@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
+import 'package:jeve_orlertv_flutter/interface/pages/galleries_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/who_page.dart';
 import 'package:jeve_orlertv_flutter/interface/widget/fullscreen_video_player.dart';
@@ -19,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int pageIndex = 0;
+  int pageIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
         HomePage(),
         ContactPage(),
         WhoPage(),
+        GalleriesPage(),
       ],
     );
   }
@@ -87,9 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
       width: MediaQuery.of(context).size.width / 5 * 2,
       child: Column(
         children: [
-          SizedBox(
-            height: AppBar().preferredSize.height + MediaQuery.of(context).viewPadding.top,
-          ),
+          SizedBox(height: AppBar().preferredSize.height + MediaQuery.of(context).viewPadding.top),
           Expanded(
             child: Drawer(
               child: Stack(
@@ -115,6 +115,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ListTile(
                           title: const Text("Chi siamo", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(2),
+                        ),
+                        ListTile(
+                          title: const Text("Gallerie", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(3),
                         ),
                         const Spacer(),
                         Padding(
