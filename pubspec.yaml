@@ -5,7 +5,7 @@ description: Progetto per l'app Orler TV.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
-version: 0.0.2+2
+version: 0.0.3+3
 
 
 environment:
