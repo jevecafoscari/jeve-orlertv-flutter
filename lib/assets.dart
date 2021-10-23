@@ -90,6 +90,8 @@ class Images {
   static AssetImage get favaro2 => const AssetImage("assets/images/favaro/favaro_2.JPG");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/favaro/favaro_3.JPG)
   static AssetImage get favaro3 => const AssetImage("assets/images/favaro/favaro_3.JPG");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/liminalSpace.jpg)
+  static AssetImage get liminalSpace => const AssetImage("assets/images/liminalSpace.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/lines.jpg)
   static AssetImage get lines => const AssetImage("assets/images/lines.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/marble.jpg)
