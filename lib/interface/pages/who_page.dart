@@ -42,8 +42,8 @@ class WhoPage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  decoration:
-                      BoxDecoration(image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
                   child: Container(
                     color: Colors.white.withOpacity(0.4),
                     child: Padding(
@@ -61,7 +61,10 @@ class WhoPage extends StatelessWidget {
                   "\n\nComincia lì, nel piccolo laboratorio, un’attività che si rivela subito un successo."
                   "\n\nVerso la metà degli anni Sessanta la galleria si sposta a Favaro Veneto, in quello che è poi diventato il centro nevralgico dell’azienda."
                   "\n\nNel frattempo il giro dei loro artisti va ampliandosi: De Chirico, Picasso, Chagall, Campigli, Guttuso, Migneco, Cassinari, Cantatore. E ancora De Pisis, Fiume, Morlotti, Music, Afro, fino ad Hartung, Adami, Possenti e tanti altri."
-                  "\n\nSi inaugurano poi le gallerie di Madonna di Campiglio, Abano Terme e Mestre.",
+                  "\n\nSi inaugurano poi le gallerie di Madonna di Campiglio, Abano Terme e Mestre."
+                  "\n\nAll’inizio degli anni Settanta,in un momento straordinariamente favorevole per il mercato, Ermanno decide di allargare l’attività anche ai tappeti... Ai quali dedica il suo cuore. L’idea si rivela formidabile. In breve ne diventano una delle aziende leader."
+                  "\n\nIl mercato funziona e gli Orler sono pronti a seguirlo, così dal 1978 al giorno d’oggi, l’azienda si dedica alle vendite televisive. Ultimo traguardo delle Gallerie d’Arte Orler è la nuova “ORLER TV”, che insieme al canale Sky 867, trasmette 24 ore su 24 tutto ciò che riguarda: Arte moderna, Manufatti d’oriente, Gioielleria e Diamanti in Blister."
+                  "\n\nIl rapporto fra la famiglia Orler ed i suoi clienti viene, per universale principio, considerato sacro.",
                   style: TextStyle(fontSize: 18.0),
                 ),
               ],
