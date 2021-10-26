@@ -54,3 +54,10 @@ flutter:
     - assets/images/mestre/
     - assets/images/campiglio/
     - assets/images/abano/
+
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/icons/ic_launcher_ios.jpg"
+  image_path_android: "assets/icons/ic_launcher_android.png"
