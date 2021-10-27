@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/models/contact_model.dart';
 import 'package:jeve_orlertv_flutter/models/gallery_model.dart';
+import 'package:jeve_orlertv_flutter/models/program_model.dart';
 
 class References {
   static const String appName = "Orler TV";
@@ -134,5 +135,227 @@ class References {
       Images.vernehXIXsecoloCaucasoRusso,
     ],
     "QUADRI": <AssetImage>[],
+  };
+
+  static Map<String, List<ProgramModel>> programs = <String, List<ProgramModel>>{
+    "Lunedì": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00 DIRETTA",
+        title: "Giorgio Regali",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "17:00-20:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "20:00-21:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "21:00-24:00 DIRETTA",
+        title: "Carlo Vanoni",
+        type: "ARTE MODERNA",
+      ),
+    ],
+    "Martedì": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00 DIRETTA",
+        title: "Carlo Vanoni",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "17:00-20:00 DIRETTA",
+        title: "Catone Biasioli",
+        type: "TAPPETI",
+      ),
+      ProgramModel(
+        time: "20:00-21:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "21:00-24:00",
+        title: "Carlo Vanoni",
+        type: "ARTE MODERNA",
+      ),
+    ],
+    "Mercoledì": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-14:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "14:00-16:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "16:00-19:00 DIRETTA",
+        title: "Claudio Burlone",
+        type: "BLISTER GIOIELLI",
+      ),
+      ProgramModel(
+        time: "19:00-21:00",
+        title: "REYER",
+        type: "REYER",
+      ),
+      ProgramModel(
+        time: "21:00-24:00",
+        title: "Giorgio Regali",
+        type: "ARTE MODERNA",
+      ),
+    ],
+    "Giovedì": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00 DIRETTA",
+        title: "Claudio Burlone",
+        type: "BLISTER GIOIELLI",
+      ),
+      ProgramModel(
+        time: "17:00-20:00 DIRETTA",
+        title: "Giorgio Regali",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "20:00-21:00",
+        title: "Cesare's Corner",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "21:00-24:00 DIRETTA",
+        title: "Catone Biasioli",
+        type: "TAPPETI",
+      ),
+    ],
+    "Venerdì": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+      ProgramModel(
+        time: "17:00-20:00 DIRETTA",
+        title: "Claudio Burlone",
+        type: "BLISTER GIOIELLI",
+      ),
+      ProgramModel(
+        time: "20:00-22:00",
+        title: "REYER",
+        type: "REYER",
+      ),
+      ProgramModel(
+        time: "22:00-24:00 DIRETTA",
+        title: "Giovanni Faccenda",
+        type: "ARTE MODERNA",
+      ),
+    ],
+    "Sabato": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00",
+        title: "Claudio Burlone",
+        type: "BLISTER GIOIELLI",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00 DIRETTA",
+        title: "Catone Biasioli",
+        type: "TAPPETI",
+      ),
+      ProgramModel(
+        time: "17:00-20:00 DIRETTA",
+        title: "Giovanni Faccenda",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "20:00-21:00",
+        title: "Cesare's Corner",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "21:00-24:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+    ],
+    "Domenica": <ProgramModel>[
+      ProgramModel(
+        time: "10:00-13:00",
+        title: "Giovanni Faccenda",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "13:00-14:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "14:00-17:00 DIRETTA",
+        title: "Catone Biasioli",
+        type: "TAPPETI",
+      ),
+      ProgramModel(
+        time: "17:00-20:00 DIRETTA",
+        title: "Giorgio Regali",
+        type: "ARTE MODERNA",
+      ),
+      ProgramModel(
+        time: "20:00-21:00",
+        title: "FILMATI",
+        type: "FILMATI",
+      ),
+      ProgramModel(
+        time: "21:00-24:00",
+        title: "REPLICA",
+        type: "REPLICA",
+      ),
+    ],
   };
 }
