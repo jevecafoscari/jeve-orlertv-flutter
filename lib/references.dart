@@ -134,7 +134,23 @@ class References {
       Images.vernehXIXSecoloCaucasoRusso,
       Images.vernehXIXsecoloCaucasoRusso,
     ],
-    "QUADRI": <AssetImage>[],
+    "QUADRI": <AssetImage>[
+      Images.armanAccumulazione193x244,
+      Images.bonalumiEstroflessione140x100Anno1964,
+      Images.christo,
+      Images.christoa,
+      Images.christob,
+      Images.christoc,
+      Images.dennisOppenheimTecnicaMistaSuCarta196x127Anno1993,
+      Images.dennisOppenheimTecnicaMistaSuCarta196x127Anno2001,
+      Images.jannisKounellisInstallazione200x360,
+      Images.markKostabiOlioTela213x176Anno1988,
+      Images.markKostabiOlioTela200x300Anno2006,
+      Images.paulJenkinsOlioTela24x30Anno1958,
+      Images.raciti,
+      Images.rosaiOlioTela50x701946,
+      Images.ugoNespolo,
+    ],
   };
 
   static Map<String, List<ProgramModel>> programming = <String, List<ProgramModel>>{

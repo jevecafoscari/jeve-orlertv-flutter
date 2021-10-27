@@ -57,6 +57,7 @@ flutter:
     - assets/images/abano/
     - assets/images/products/jewels/
     - assets/images/products/carpets/
+    - assets/images/products/paintings/
 
 
 flutter_icons:

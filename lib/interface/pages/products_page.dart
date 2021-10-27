@@ -9,6 +9,7 @@ class ProductsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: References.products.entries.length,
+      padding: const EdgeInsets.only(bottom: 16.0),
       itemBuilder: (BuildContext context, int typeIndex) => Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

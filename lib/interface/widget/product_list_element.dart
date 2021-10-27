@@ -59,7 +59,7 @@ class ProductListElement extends StatelessWidget {
     subtitleLines.removeAt(0);
     String? subtitle;
     if (subtitleLines.isNotEmpty) subtitle = subtitleLines.reduce((value, element) => "$value\n$element");
-    if (subtitle != null) subtitle.replaceAll("+", "");
+    if (subtitle != null) subtitle.split("+").first;
 
     title = title.split("_").first;
 
