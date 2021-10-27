@@ -137,7 +137,7 @@ class References {
     "QUADRI": <AssetImage>[],
   };
 
-  static Map<String, List<ProgramModel>> programs = <String, List<ProgramModel>>{
+  static Map<String, List<ProgramModel>> programming = <String, List<ProgramModel>>{
     "Lunedì": <ProgramModel>[
       ProgramModel(
         time: "10:00-13:00 DIRETTA",

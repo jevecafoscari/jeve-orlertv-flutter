@@ -5,6 +5,7 @@ import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/galleries_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/products_page.dart';
+import 'package:jeve_orlertv_flutter/interface/pages/programming_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/who_page.dart';
 import 'package:jeve_orlertv_flutter/interface/widget/fullscreen_video_player.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Chi siamo",
     "Gallerie",
     "Collezione",
+    "Palinsesto",
   ];
 
   int pageIndex = 0;
@@ -87,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
         WhoPage(),
         GalleriesPage(),
         ProductsPage(),
+        ProgrammingPage(),
       ],
     );
   }
@@ -132,6 +135,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ListTile(
                           title: const Text("Collezione", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(4),
+                        ),
+                        ListTile(
+                          title: const Text("Palinsesto", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(5),
                         ),
                         const Spacer(),
                         Padding(
