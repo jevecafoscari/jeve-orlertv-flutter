@@ -12,8 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final VideoPlayerController videoPlayerController =
-      VideoPlayerController.network(References.streamUrl);
+  final VideoPlayerController videoPlayerController = VideoPlayerController.network(References.streamUrl);
 
   bool initialized = false;
 
@@ -51,9 +50,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(16.0),
                 child: FittedBox(
                   fit: BoxFit.contain,
-                  child: SizedBox.fromSize(
-                      size: videoPlayerController.value.size,
-                      child: VideoPlayer(videoPlayerController)),
+                  child: SizedBox.fromSize(size: videoPlayerController.value.size, child: VideoPlayer(videoPlayerController)),
                 ),
               ),
             ),
@@ -63,8 +60,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("ORLER TV - LIVE Streaming",
-                    style: hintTextStyle.copyWith(fontWeight: FontWeight.bold)),
+                Text("ORLER TV - LIVE Streaming", style: hintTextStyle.copyWith(fontWeight: FontWeight.bold)),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24.0),
                   child: Text("Canale 144 del Digitale Terrestre", style: hintTextStyle),

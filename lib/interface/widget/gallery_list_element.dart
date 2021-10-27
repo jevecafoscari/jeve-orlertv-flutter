@@ -15,8 +15,7 @@ class GalleryListElement extends StatelessWidget {
         children: [
           PageView.builder(
             itemCount: galleryModel.images.length,
-            itemBuilder: (BuildContext context, int index) =>
-                Image(image: galleryModel.images.elementAt(index), fit: BoxFit.cover),
+            itemBuilder: (BuildContext context, int index) => Image(image: galleryModel.images.elementAt(index), fit: BoxFit.cover),
           ),
           Align(
             alignment: AlignmentDirectional.bottomCenter,

@@ -42,8 +42,7 @@ class WhoPage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
+                  decoration: BoxDecoration(image: DecorationImage(image: Images.marble, fit: BoxFit.cover)),
                   child: Container(
                     color: Colors.white.withOpacity(0.4),
                     child: Padding(

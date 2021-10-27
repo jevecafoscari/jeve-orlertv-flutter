@@ -24,8 +24,7 @@ class References {
   static const List<ContactModel> contacts = <ContactModel>[
     ContactModel(
       title: "SEDE CENTRALE:\nFavaro Veneto",
-      text:
-          "Via Col San Martino 37\nTel. +39 041 632671\nFax. +39 041 634850\n\nAperta 24h/24 tutto l’anno dal 1958",
+      text: "Via Col San Martino 37\nTel. +39 041 632671\nFax. +39 041 634850\n\nAperta 24h/24 tutto l’anno dal 1958",
     ),
     ContactModel(
       title: "Abano Terme",
@@ -34,8 +33,7 @@ class References {
     ),
     ContactModel(
       title: "Mestre",
-      text:
-          "Via Einaudi 16\nTel.: +39 041 2381089\nEmail: mestre@orler.it\n\nAperta per mostre temporanee",
+      text: "Via Einaudi 16\nTel.: +39 041 2381089\nEmail: mestre@orler.it\n\nAperta per mostre temporanee",
     ),
     ContactModel(
       title: "Madonna di Campiglio",
@@ -89,4 +87,43 @@ class References {
       ],
     ),
   ];
+
+  static Map<String, List<AssetImage>> products = <String, List<AssetImage>>{
+    "GIOIELLI e OROLOGI": <AssetImage>[
+      Images.anelloInOroBiancoConDiamanti,
+      Images.anelloInOroBiancoConZaffiroRosaEDiamantiTaglioBaguette,
+      Images.anelloInOroBiancoConTanzaniteEDiamanti,
+      Images.anelloInOroBiancoConZaffiroEDiamanti,
+      Images.anelloInOroBiancoConSmeraldoEDiamantiATaglioMarquise,
+      Images.collierDiPerleAustraliane,
+      Images.collierDiTurchesiNaturaliEDiamanti,
+      Images.orecchiniInOroBiancoEDiamantiDegrade,
+      Images.patekPhilippeAcquaNautInAcciaioEOroBianco,
+      Images.patekPhilippeInOroGiallo,
+      Images.rolexOysterPerpetualRossoCorallo,
+      Images.rolexDaytonaAcciaioEOro,
+      Images.rolexSkyDwellerAcciaioEOro,
+      Images.rolexSubmarinerHulk,
+      Images.rolexSubmarinerScrittaRossa,
+      Images.rolexYachtMaster,
+      Images.solitarioInOroBiancoConDiamanteTaglioPrincess,
+    ],
+    "TAPPETI": <AssetImage>[
+      Images.bergamaOPergama,
+      Images.ghiordes204x144,
+      Images.heritzSeta180x133FineXIXSecolo,
+      Images.patchworkRigeneratoInAfganistanConPezziPersiani,
+      Images.pergamaFineXVIIISecolo,
+      Images.pergamo121x114FineXIXSecolo,
+      Images.pergamoKeles155x106FineXIXSecolo,
+      Images.starKazak207x148FineXVIIISecolo,
+      Images.sumakVerneh385x156FineXIXSecolo,
+      Images.ushak177x145FineXVIIISecolo,
+      Images.ushak208x150InizioXIXSecolo,
+      Images.ushak277x186FineXVIIISecolo,
+      Images.vernehXIXSecoloCaucasoRusso,
+      Images.vernehXIXsecoloCaucasoRusso,
+    ],
+    "QUADRI": <AssetImage>[],
+  };
 }

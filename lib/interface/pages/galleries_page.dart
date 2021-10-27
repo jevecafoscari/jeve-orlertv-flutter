@@ -9,8 +9,7 @@ class GalleriesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: References.galleries.length,
-      itemBuilder: (BuildContext context, int index) =>
-          GalleryListElement(galleryModel: References.galleries.elementAt(index)),
+      itemBuilder: (BuildContext context, int index) => GalleryListElement(galleryModel: References.galleries.elementAt(index)),
     );
   }
 }

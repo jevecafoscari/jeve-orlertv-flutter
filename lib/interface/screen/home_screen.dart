@@ -4,6 +4,7 @@ import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/galleries_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
+import 'package:jeve_orlertv_flutter/interface/pages/products_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/who_page.dart';
 import 'package:jeve_orlertv_flutter/interface/widget/fullscreen_video_player.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
@@ -25,9 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
     "Contatti",
     "Chi siamo",
     "Gallerie",
+    "Collezione",
   ];
 
-  int pageIndex = 1;
+  int pageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -84,12 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ContactPage(),
         WhoPage(),
         GalleriesPage(),
+        ProductsPage(),
       ],
     );
   }
 
-  static const TextStyle drawerOptionsTextStyle =
-      TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
+  static const TextStyle drawerOptionsTextStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.w400);
 
   Widget buildDrawer() {
     return SizedBox(
@@ -127,6 +129,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text("Gallerie", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(3),
                         ),
+                        ListTile(
+                          title: const Text("Collezione", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(4),
+                        ),
                         const Spacer(),
                         Padding(
                           padding: const EdgeInsets.all(16.0),
@@ -155,8 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ]);
         break;
       default:
-        SystemChrome.setPreferredOrientations(
-            [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+        SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
         break;
     }
 

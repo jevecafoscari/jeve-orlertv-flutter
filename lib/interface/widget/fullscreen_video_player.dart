@@ -11,8 +11,7 @@ class FullscreenVideoPlayer extends StatefulWidget {
 }
 
 class _FullscreenVideoPlayerState extends State<FullscreenVideoPlayer> {
-  final VideoPlayerController videoPlayerController =
-      VideoPlayerController.network(References.streamUrl);
+  final VideoPlayerController videoPlayerController = VideoPlayerController.network(References.streamUrl);
 
   bool initialized = false;
 
@@ -43,8 +42,7 @@ class _FullscreenVideoPlayerState extends State<FullscreenVideoPlayer> {
         padding: const EdgeInsets.all(16.0),
         child: FittedBox(
           fit: BoxFit.contain,
-          child: SizedBox.fromSize(
-              size: videoPlayerController.value.size, child: VideoPlayer(videoPlayerController)),
+          child: SizedBox.fromSize(size: videoPlayerController.value.size, child: VideoPlayer(videoPlayerController)),
         ),
       ),
     );
