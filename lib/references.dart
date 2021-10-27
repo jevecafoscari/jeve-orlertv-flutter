@@ -63,7 +63,6 @@ class References {
     GalleryModel(
       title: "Galleria Abano Terme",
       images: <AssetImage>[
-        Images.abano1,
         Images.abano2,
         Images.abano3,
         Images.abano4,
@@ -76,6 +75,7 @@ class References {
         Images.abano11,
         Images.abano12,
         Images.abano13,
+        Images.abano1,
       ],
     ),
     GalleryModel(
