@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/interface/widget/product_list_element.dart';
-import 'package:jeve_orlertv_flutter/models/product_model.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
 
 class ProductsPage extends StatelessWidget {

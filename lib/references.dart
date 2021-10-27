@@ -21,6 +21,15 @@ class References {
     ],
   );
 
+  static const LinearGradient genericGradient = LinearGradient(
+    end: AlignmentDirectional.topStart,
+    begin: AlignmentDirectional.bottomEnd,
+    colors: <Color>[
+      Colors.black,
+      orlerBlue,
+    ],
+  );
+
   static const List<ContactModel> contacts = <ContactModel>[
     ContactModel(
       title: "SEDE CENTRALE:\nFavaro Veneto",

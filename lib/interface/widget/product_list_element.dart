@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/assets.dart';
+import 'package:jeve_orlertv_flutter/references.dart';
 
 class ProductListElement extends StatelessWidget {
   final AssetImage product;
@@ -8,39 +9,42 @@ class ProductListElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 2 / 3,
-      child: Column(
-        children: [
-          Flexible(
-            child: AspectRatio(
-              aspectRatio: 0.7,
-              child: Column(
-                children: [
-                  AspectRatio(aspectRatio: 1.0, child: Image(image: product)),
-                  Flexible(child: Image(image: Images.shadow)),
-                ],
+    return InkWell(
+      onTap: () => showProductDetails(context),
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 2 / 3,
+        child: Column(
+          children: [
+            Flexible(
+              child: AspectRatio(
+                aspectRatio: 0.7,
+                child: Column(
+                  children: [
+                    AspectRatio(aspectRatio: 1.0, child: Image(image: product, fit: BoxFit.contain)),
+                    Flexible(child: Image(image: Images.shadow)),
+                  ],
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              getProductTitleAndSubtitle.first,
-              style: Theme.of(context).textTheme.headline6,
-              textAlign: TextAlign.center,
-            ),
-          ),
-          if (getProductTitleAndSubtitle.length > 1)
             Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
-                getProductTitleAndSubtitle.last,
-                style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 16.0),
+                getProductTitleAndSubtitle.first,
+                style: Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.center,
               ),
             ),
-        ],
+            if (getProductTitleAndSubtitle.length > 1)
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Text(
+                  getProductTitleAndSubtitle.last,
+                  style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 16.0),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -60,5 +64,68 @@ class ProductListElement extends StatelessWidget {
     title = title.split("_").first;
 
     return <String>[title, if (subtitle != null) subtitle];
+  }
+
+  void showProductDetails(BuildContext context) {
+    final TransformationController controller = TransformationController();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+            child: Material(
+              child: Container(
+                decoration: const BoxDecoration(
+                  gradient: References.genericGradient,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional.centerEnd,
+                        child: IconButton(
+                          icon: const Icon(Icons.close, color: Colors.white),
+                          onPressed: Navigator.of(context).pop,
+                        ),
+                      ),
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+                          child: InteractiveViewer(
+                            transformationController: controller,
+                            onInteractionEnd: (ScaleEndDetails details) => controller.value = Matrix4.identity(),
+                            child: Container(
+                              color: Colors.white,
+                              child: Image(image: product, fit: BoxFit.contain),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16.0),
+                      const Divider(color: Colors.white, thickness: 2.0),
+                      Text(getProductTitleAndSubtitle.first, style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white)),
+                      if (getProductTitleAndSubtitle.length > 1)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            getProductTitleAndSubtitle.last,
+                            style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 16.0, color: Colors.white),
+                          ),
+                        ),
+                      const SizedBox(height: 16.0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
