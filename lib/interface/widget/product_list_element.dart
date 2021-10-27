@@ -20,7 +20,9 @@ class ProductListElement extends StatelessWidget {
                 aspectRatio: 0.7,
                 child: Column(
                   children: [
-                    AspectRatio(aspectRatio: 1.0, child: Image(image: product, fit: BoxFit.contain)),
+                    AspectRatio(
+                        aspectRatio: 1.0,
+                        child: Image(image: product, fit: BoxFit.contain)),
                     Flexible(child: Image(image: Images.shadow)),
                   ],
                 ),
@@ -39,7 +41,10 @@ class ProductListElement extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
                   getProductTitleAndSubtitle.last,
-                  style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 16.0),
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(fontSize: 16.0),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -53,13 +58,13 @@ class ProductListElement extends StatelessWidget {
     String name = product.assetName;
 
     String title = name.split("/").last;
-    title = title.split(".").first;
+    title = title.split(".").first.split("+").first;
 
     List<String> subtitleLines = title.split("_");
     subtitleLines.removeAt(0);
     String? subtitle;
-    if (subtitleLines.isNotEmpty) subtitle = subtitleLines.reduce((value, element) => "$value\n$element");
-    if (subtitle != null) subtitle.split("+").first;
+    if (subtitleLines.isNotEmpty)
+      subtitle = subtitleLines.reduce((value, element) => "$value\n$element");
 
     title = title.split("_").first;
 
@@ -95,10 +100,12 @@ class ProductListElement extends StatelessWidget {
                       ),
                       Expanded(
                         child: ClipRRect(
-                          borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(32.0)),
                           child: InteractiveViewer(
                             transformationController: controller,
-                            onInteractionEnd: (ScaleEndDetails details) => controller.value = Matrix4.identity(),
+                            onInteractionEnd: (ScaleEndDetails details) =>
+                                controller.value = Matrix4.identity(),
                             child: Container(
                               color: Colors.white,
                               child: Image(image: product, fit: BoxFit.contain),
@@ -108,13 +115,20 @@ class ProductListElement extends StatelessWidget {
                       ),
                       const SizedBox(height: 16.0),
                       const Divider(color: Colors.white, thickness: 2.0),
-                      Text(getProductTitleAndSubtitle.first, style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white)),
+                      Text(getProductTitleAndSubtitle.first,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(color: Colors.white)),
                       if (getProductTitleAndSubtitle.length > 1)
                         Padding(
                           padding: const EdgeInsets.only(top: 4.0),
                           child: Text(
                             getProductTitleAndSubtitle.last,
-                            style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 16.0, color: Colors.white),
+                            style: Theme.of(context)
+                                .textTheme
+                                .caption!
+                                .copyWith(fontSize: 16.0, color: Colors.white),
                           ),
                         ),
                       const SizedBox(height: 16.0),
