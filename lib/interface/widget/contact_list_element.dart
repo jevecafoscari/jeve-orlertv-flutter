@@ -17,16 +17,16 @@ class ContactListElement extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: odd ? null : LinearGradient(colors: <Color>[Colors.black.withOpacity(0.8), Colors.transparent]),
-        color: odd ? Colors.white.withOpacity(0.4) : null,
+        color: odd ? Colors.white.withOpacity(0.5) : null,
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(contactModel.title, style: TextStyle(fontWeight: FontWeight.bold, color: odd ? null : Colors.white)),
+            Text(contactModel.title, style: TextStyle(fontWeight: FontWeight.bold, color: odd ? null : Colors.white, fontSize: 16.0)),
             const SizedBox(height: 8.0),
-            Text(contactModel.text, style: TextStyle(color: odd ? null : Colors.white, fontWeight: FontWeight.w300)),
+            Text(contactModel.text, style: TextStyle(color: odd ? null : Colors.white, fontWeight: FontWeight.w400)),
           ],
         ),
       ),
