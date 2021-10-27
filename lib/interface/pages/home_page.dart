@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.symmetric(vertical: 24.0),
                   child: Text("Canale 144 del Digitale Terrestre", style: hintTextStyle),
                 ),
-                const Text("Sky 867", style: hintTextStyle),
+                const Text("Canale 867 di Sky", style: hintTextStyle),
               ],
             ),
           ),
