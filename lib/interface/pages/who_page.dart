@@ -20,10 +20,21 @@ class WhoPage extends StatelessWidget {
                   const SizedBox(height: 112.0),
                 ],
               ),
-              const MarbledText(
-                text: "\"L'acquisto di un'opera d'arte può rappresentare anche un notevole sacrificio e perciò  essa deve essere vera e genuina\"."
-                    "\n\n"
-                    "– Ermanno Orler -",
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  color: Colors.white,
+                  child: const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "\"L'acquisto di un'opera d'arte può rappresentare anche un notevole sacrificio e perciò  essa deve essere vera e genuina\"."
+                      "\n\n"
+                      "– Ermanno Orler –",
+                      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
