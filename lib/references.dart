@@ -9,7 +9,7 @@ class References {
 
   static const String streamUrl = "https://w1.mediastreaming.it/orlertv/livestream/playlist.m3u8";
 
-  static const String phoneNumber = "+39041632671";
+  static const String phoneNumber = "+39041631240";
 
   static const Color orlerBlue = Color(0xFF0175F9);
   static const LinearGradient appBarGradient = LinearGradient(
@@ -34,7 +34,7 @@ class References {
   static const List<ContactModel> contacts = <ContactModel>[
     ContactModel(
       title: "SEDE CENTRALE:\nFavaro Veneto",
-      text: "Via Col San Martino 37\nTel. +39 041 632671\nFax. +39 041 634850\n\nAperta 24h/24 tutto l’anno dal 1958",
+      text: "Via Col San Martino 37\nTel. +39 041 631240 - ORLER TV\nTel. +39 041 632671 - Uffici\nFax. +39 041 634850\n\nAperta 24h/24 tutto l’anno dal 1958",
     ),
     ContactModel(
       title: "Abano Terme",
@@ -56,9 +56,15 @@ class References {
     GalleryModel(
       title: "Sede Centrale: Favaro Veneto",
       images: <AssetImage>[
+        Images.favaro,
         Images.favaro1,
         Images.favaro2,
         Images.favaro3,
+        Images.favaro4,
+        Images.favaro5,
+        Images.favaro6,
+        Images.favaro7,
+        Images.favaro8,
       ],
     ),
     GalleryModel(
@@ -82,12 +88,16 @@ class References {
     GalleryModel(
       title: "Galleria Madonna di Campiglio",
       images: <AssetImage>[
+        Images.campiglio,
         Images.campiglio1,
         Images.campiglio2,
         Images.campiglio3,
         Images.campiglio4,
         Images.campiglio5,
         Images.campiglio6,
+        Images.campiglio7,
+        Images.campiglio8,
+        Images.campiglio9,
       ],
     ),
     GalleryModel(
@@ -150,6 +160,7 @@ class References {
       Images.raciti,
       Images.rosaiOlioTela50x701946,
       Images.ugoNespolo,
+      Images.victorVasarely,
     ],
   };
 
