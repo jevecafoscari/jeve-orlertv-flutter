@@ -46,6 +46,8 @@ class Images {
   static AssetImage get icLauncherAndroid => const AssetImage("assets/icons/ic_launcher_android.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/icons/ic_launcher_ios.jpg)
   static AssetImage get icLauncherIos => const AssetImage("assets/icons/ic_launcher_ios.jpg");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/icons/ic_playstore.jpg)
+  static AssetImage get icPlaystore => const AssetImage("assets/icons/ic_playstore.jpg");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/icons/logo.png)
   static AssetImage get logo => const AssetImage("assets/icons/logo.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/abano/abano_1.jpg)
@@ -166,6 +168,8 @@ class Images {
   static AssetImage get solitarioInOroBiancoConDiamanteTaglioPrincess => const AssetImage("assets/images/products/jewels/Solitario in oro bianco con diamante taglio princess.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/Arman_accumulazione_193x244.png)
   static AssetImage get armanAccumulazione193x244 => const AssetImage("assets/images/products/paintings/Arman_accumulazione_193x244.png");
+  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/Bonalumi_estroflessione_140x100%20anno%201964.png)
+  static AssetImage get bonalumiEstroflessione140x100Anno1964 => const AssetImage("assets/images/products/paintings/Bonalumi_estroflessione_140x100 anno 1964.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/Christo+a.png)
   static AssetImage get christoa => const AssetImage("assets/images/products/paintings/Christo+a.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/Christo+b.png)
@@ -192,8 +196,6 @@ class Images {
   static AssetImage get rosaiOlioTela50x701946 => const AssetImage("assets/images/products/paintings/Rosai_olio tela_50x70 1946.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/Ugo%20Nespolo.png)
   static AssetImage get ugoNespolo => const AssetImage("assets/images/products/paintings/Ugo Nespolo.png");
-  /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/products/paintings/bonalumi_estroflessione_140x100%20anno%201964.png)
-  static AssetImage get bonalumiEstroflessione140x100Anno1964 => const AssetImage("assets/images/products/paintings/bonalumi_estroflessione_140x100 anno 1964.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/shadow.png)
   static AssetImage get shadow => const AssetImage("assets/images/shadow.png");
   /// ![](file:///Users/emiliodallatorre/Documents/GitHub/jeve-orlertv-flutter/assets/images/splashWallpaper.jpg)

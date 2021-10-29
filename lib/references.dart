@@ -116,7 +116,7 @@ class References {
       Images.rolexSubmarinerHulk,
       Images.rolexSubmarinerScrittaRossa,
       Images.rolexYachtMaster,
-      Images.solitarioInOroBiancoConDiamanteTaglioPrincess,
+      // Images.solitarioInOroBiancoConDiamanteTaglioPrincess,
     ],
     "TAPPETI": <AssetImage>[
       Images.bergamaOPergama,
