@@ -17,15 +17,15 @@ dependencies:
     sdk: flutter
 
   # Media
-  video_player: ^2.2.4
+  video_player: ^2.2.7
 
   # Utilità
-  visibility_detector: ^0.2.0
-  url_launcher: ^6.0.11
-  path_provider: ^2.0.5
+  visibility_detector: ^0.2.2
+  url_launcher: ^6.0.16
+  path_provider: ^2.0.7
 
   # Grafica
-  cupertino_icons: ^1.0.3
+  cupertino_icons: ^1.0.4
   new_gradient_app_bar: ^0.2.0
   # google_fonts: ^2.1.0
   swatcher: ^0.1.0
@@ -36,7 +36,7 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^1.0.4
-  build_runner: ^2.1.4
+  build_runner: ^2.1.5
   # flutter packages pub run build_runner build
   r_flutter: ^0.9.0
 
