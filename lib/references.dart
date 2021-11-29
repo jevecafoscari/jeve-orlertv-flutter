@@ -11,6 +11,8 @@ class References {
 
   static const String phoneNumber = "+39041631240";
 
+  static const String apiUrl = "https://www.orler.it";
+
   static const Color orlerBlue = Color(0xFF0175F9);
   static const LinearGradient appBarGradient = LinearGradient(
     end: AlignmentDirectional.topEnd,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/contact_page.dart';
+import 'package:jeve_orlertv_flutter/interface/pages/event_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/galleries_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/home_page.dart';
 import 'package:jeve_orlertv_flutter/interface/pages/products_page.dart';
@@ -29,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Gallerie",
     "Collezione",
     "Palinsesto",
+    "Eventi",
   ];
 
   int pageIndex = 0;
@@ -90,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
         GalleriesPage(),
         ProductsPage(),
         ProgrammingPage(),
+        EventPage(),
       ],
     );
   }
@@ -139,6 +142,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ListTile(
                           title: const Text("Palinsesto", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(5),
+                        ),
+                        ListTile(
+                          title: const Text("Eventi", style: drawerOptionsTextStyle),
+                          onTap: () => goToPage(6),
                         ),
                         const Spacer(),
                         Padding(
