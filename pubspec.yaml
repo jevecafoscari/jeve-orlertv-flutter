@@ -23,8 +23,10 @@ dependencies:
   visibility_detector: ^0.2.2
   url_launcher: ^6.0.16
   path_provider: ^2.0.7
-  wordpress_api: ^1.2.0
+  wordpress_api:
+    path: ../dart-wp
   html: ^0.15.0
+  flutter_html: ^2.2.0
 
   # Grafica
   cupertino_icons: ^1.0.4

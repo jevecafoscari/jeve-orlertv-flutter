@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jeve_orlertv_flutter/interface/screen/event_screen.dart';
 import 'package:jeve_orlertv_flutter/interface/screen/home_screen.dart';
 import 'package:jeve_orlertv_flutter/interface/screen/splash_screen.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
@@ -24,6 +25,7 @@ class OrlerTV extends StatelessWidget {
       routes: <String, Widget Function(BuildContext)>{
         HomeScreen.route: (BuildContext context) => const HomeScreen(),
         SplashScreen.route: (BuildContext context) => const SplashScreen(),
+        EventScreen.route: (BuildContext context) => EventScreen(),
       },
     );
   }

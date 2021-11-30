@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/models/event_model.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
@@ -15,15 +17,16 @@ class EventProvider {
       },
     );
 
-    debugPrint("Trovati i post.");
-
     final List<Post> events = rawEvents.data as List<Post>;
     if (events.isNotEmpty) {
-      for (final Post event in events) {
-        debugPrint(EventModel.fromPost(event).toString());
+      final List<EventModel> formattedEvents = <EventModel>[];
+
+      for (int index = 0; index < events.length; index++) {
+        final EventModel event = EventModel.fromPost(events.elementAt(index));
+        formattedEvents.add(event);
       }
 
-      return events.map((final Post event) => EventModel.fromPost(event)).cast<EventModel>().toList();
+      return formattedEvents;
     }
 
     debugPrint("Non ho trovato alcun post.");
