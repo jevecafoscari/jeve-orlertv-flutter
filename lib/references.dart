@@ -41,7 +41,7 @@ class References {
     ContactModel(
       title: "Abano Terme",
       text:
-          "Via delle Terme 17\n35031 Abano Terme\nTel. +39 049667394\nemail. abano@orler.it\n\nAperta tutto l’anno eccetto il mese di agosto (dal 20 luglio al 10 agosto)",
+          "Via delle Terme 117\n35031 Abano Terme\nTel. +39 049667394\nemail. abano@orler.it\n\nAperta tutto l’anno eccetto il mese di agosto (dal 20 luglio al 10 agosto)",
     ),
     ContactModel(
       title: "Mestre",
