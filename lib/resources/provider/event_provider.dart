@@ -11,6 +11,7 @@ class EventProvider {
     final WPResponse rawEvents = await client.posts.fetch(
       args: <String, dynamic>{
         "categories": 19,
+        "per_page": 5,
       },
     );
 
@@ -18,7 +19,7 @@ class EventProvider {
 
     final List<Post> events = rawEvents.data as List<Post>;
     if (events.isNotEmpty) {
-      for(final Post event in events) {
+      for (final Post event in events) {
         debugPrint(EventModel.fromPost(event).toString());
       }
 
