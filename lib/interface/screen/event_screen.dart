@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/models/event_model.dart';
@@ -33,27 +34,43 @@ class EventScreen extends StatelessWidget {
             if (event.coverUrl != null)
               AspectRatio(
                 aspectRatio: 4 / 3,
-                child: Stack(
-                  fit: StackFit.passthrough,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Image.network(
-                      event.coverUrl!,
-                      fit: BoxFit.cover,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Align(
-                        alignment: AlignmentDirectional.bottomStart,
-                        child: Text(
-                          event.title,
-                          style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white),
-                        ),
+                    Expanded(
+                      child: Stack(
+                        fit: StackFit.passthrough,
+                        children: [
+                          CachedNetworkImage(
+                            imageUrl: event.coverUrl!,
+                            fit: BoxFit.cover,
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional.bottomCenter,
+                            child: Container(
+                              color: Colors.white,
+                              child: Text(event.title, style: Theme.of(context).textTheme.headline5),
+                            ),
+                          ),
+                        ],
                       ),
+                    ),
+                    Container(
+                      height: 2.0,
+                      color: Colors.white,
                     ),
                   ],
                 ),
               ),
-            Html(data: event.content),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Html(
+                data: event.content,
+                style: <String, Style>{
+                  "*": Style(fontSize: FontSize.large),
+                },
+              ),
+            ),
           ],
         ),
       ),

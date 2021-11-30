@@ -21,9 +21,11 @@ class EventPage extends StatelessWidget {
             return Container(
               color: Colors.white.withOpacity(0.4),
               child: ListView.separated(
-                padding: const EdgeInsets.all(16.0),
                 itemCount: postsSnapshot.data!.length,
-                separatorBuilder: (BuildContext context, int index) => const Divider(),
+                separatorBuilder: (BuildContext context, int index) => Container(
+                  height: 2.0,
+                  color: Colors.white,
+                ),
                 itemBuilder: (BuildContext context, int index) => EventListElement(event: postsSnapshot.data!.elementAt(index)),
               ),
             );
