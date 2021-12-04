@@ -49,7 +49,11 @@ class EventScreen extends StatelessWidget {
                             alignment: AlignmentDirectional.bottomCenter,
                             child: Container(
                               color: Colors.white,
-                              child: Text(event.title, style: Theme.of(context).textTheme.headline5),
+                              child: Text(
+                                event.title,
+                                style: Theme.of(context).textTheme.headline5,
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ],
