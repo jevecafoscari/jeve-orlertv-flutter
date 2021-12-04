@@ -17,7 +17,7 @@ class EventModel {
   factory EventModel.fromPost(Post post) => EventModel(
         coverUrl: post.coverUrl,
         title: _parseHtmlString(post.title!),
-        content: _parseHtmlString(post.content!),
+        content: post.content!,
         excerpt: _parseHtmlString(post.excerpt!).split("\n").first.replaceAll("Read More", ""),
       );
 }

@@ -67,7 +67,7 @@ class EventScreen extends StatelessWidget {
               child: Html(
                 data: event.content,
                 style: <String, Style>{
-                  "*": Style(fontSize: FontSize.large),
+                  "p": Style(fontSize: FontSize.large),
                 },
               ),
             ),
