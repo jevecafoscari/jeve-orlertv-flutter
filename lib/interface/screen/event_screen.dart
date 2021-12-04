@@ -32,38 +32,77 @@ class EventScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             if (event.coverUrl != null)
-              AspectRatio(
-                aspectRatio: 4 / 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(
-                      child: Stack(
-                        fit: StackFit.passthrough,
-                        children: [
-                          CachedNetworkImage(
-                            imageUrl: event.coverUrl!,
-                            fit: BoxFit.cover,
+              InkWell(
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    useSafeArea: true,
+                    barrierDismissible: true,
+                    builder: (BuildContext context) {
+                      final TransformationController zoomController = TransformationController();
+
+                      return Material(
+                        color: Colors.transparent,
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Align(
+                                child: IconButton(
+                                  icon: const Icon(
+                                    Icons.close,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: Navigator.of(context).pop,
+                                ),
+                                alignment: AlignmentDirectional.centerEnd,
+                              ),
+                              InteractiveViewer(
+                                transformationController: zoomController,
+                                onInteractionEnd: (final ScaleEndDetails details) => zoomController.value = Matrix4.identity(),
+                                child: CachedNetworkImage(
+                                  imageUrl: event.coverUrl!,
+                                ),
+                              ),
+                            ],
                           ),
-                          Align(
-                            alignment: AlignmentDirectional.bottomCenter,
-                            child: Container(
-                              color: Colors.white,
-                              child: Text(
-                                event.title,
-                                style: Theme.of(context).textTheme.headline5,
-                                textAlign: TextAlign.center,
+                        ),
+                      );
+                    },
+                  );
+                },
+                child: AspectRatio(
+                  aspectRatio: 4 / 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(
+                        child: Stack(
+                          fit: StackFit.passthrough,
+                          children: [
+                            CachedNetworkImage(
+                              imageUrl: event.coverUrl!,
+                              fit: BoxFit.cover,
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional.bottomCenter,
+                              child: Container(
+                                color: Colors.white,
+                                child: Text(
+                                  event.title,
+                                  style: Theme.of(context).textTheme.headline5,
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      height: 2.0,
-                      color: Colors.white,
-                    ),
-                  ],
+                      Container(
+                        height: 2.0,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             Padding(
