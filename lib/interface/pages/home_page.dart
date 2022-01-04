@@ -4,6 +4,7 @@ import 'package:jeve_orlertv_flutter/references.dart';
 import 'package:jeve_orlertv_flutter/resources/helper/connection_helper.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+import 'package:wakelock/wakelock.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
   initState() {
     videoPlayerController.initialize().whenComplete(() {
       videoPlayerController.play();
+      Wakelock.enable();
       setState(() => initializedVideo = true);
     });
 
@@ -53,8 +55,10 @@ class _HomePageState extends State<HomePage> {
                     if (initialized) {
                       if (info.visibleFraction == 0.0) {
                         videoPlayerController.pause();
+                        Wakelock.disable();
                       } else if (info.visibleFraction == 1.0) {
                         videoPlayerController.play();
+                        Wakelock.enable();
                       }
                     }
                   },

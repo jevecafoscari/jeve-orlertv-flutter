@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+import 'package:wakelock/wakelock.dart';
 
 class FullscreenVideoPlayer extends StatefulWidget {
   const FullscreenVideoPlayer({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class _FullscreenVideoPlayerState extends State<FullscreenVideoPlayer> {
   initState() {
     videoPlayerController.initialize().whenComplete(() {
       videoPlayerController.play();
+      Wakelock.enable();
       setState(() => initialized = true);
     });
 
@@ -46,5 +48,12 @@ class _FullscreenVideoPlayerState extends State<FullscreenVideoPlayer> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    Wakelock.disable();
+
+    super.dispose();
   }
 }
