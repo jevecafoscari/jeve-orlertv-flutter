@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   initState() {
-    WidgetsBinding.instance!.addPostFrameCallback((final Duration timestamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((final Duration timestamp) async {
       await Future.delayed(const Duration(seconds: 2));
       Navigator.of(context).pushReplacementNamed(HomeScreen.route);
     });

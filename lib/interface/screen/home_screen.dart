@@ -135,10 +135,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text("Gallerie", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(3),
                         ),
-                        ListTile(
+                        /* ListTile(
                           title: const Text("Collezione", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(4),
-                        ),
+                        ), */
                         ListTile(
                           title: const Text("Palinsesto", style: drawerOptionsTextStyle),
                           onTap: () => goToPage(5),
