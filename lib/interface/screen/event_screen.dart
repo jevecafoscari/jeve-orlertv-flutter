@@ -17,7 +17,7 @@ class _EventScreenState extends State<EventScreen> {
   late EventModel event;
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
     event = ModalRoute.of(context)!.settings.arguments as EventModel;
 
     super.initState();
@@ -53,28 +53,26 @@ class _EventScreenState extends State<EventScreen> {
 
                       return Material(
                         color: Colors.transparent,
-                        child: Container(
-                          child: Column(
-                            children: [
-                              Align(
-                                child: IconButton(
-                                  icon: const Icon(
-                                    Icons.close,
-                                    color: Colors.white,
-                                  ),
-                                  onPressed: Navigator.of(context).pop,
+                        child: Column(
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional.centerEnd,
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.close,
+                                  color: Colors.white,
                                 ),
-                                alignment: AlignmentDirectional.centerEnd,
+                                onPressed: Navigator.of(context).pop,
                               ),
-                              InteractiveViewer(
-                                transformationController: zoomController,
-                                onInteractionEnd: (final ScaleEndDetails details) => zoomController.value = Matrix4.identity(),
-                                child: CachedNetworkImage(
-                                  imageUrl: event.coverUrl!,
-                                ),
+                            ),
+                            InteractiveViewer(
+                              transformationController: zoomController,
+                              onInteractionEnd: (final ScaleEndDetails details) => zoomController.value = Matrix4.identity(),
+                              child: CachedNetworkImage(
+                                imageUrl: event.coverUrl!,
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       );
                     },
@@ -99,7 +97,7 @@ class _EventScreenState extends State<EventScreen> {
                                 color: Colors.white,
                                 child: Text(
                                   event.title,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style: Theme.of(context).textTheme.headlineSmall,
                                   textAlign: TextAlign.center,
                                 ),
                               ),
