@@ -25,7 +25,7 @@ class OrlerTV extends StatelessWidget {
       routes: <String, Widget Function(BuildContext)>{
         HomeScreen.route: (BuildContext context) => const HomeScreen(),
         SplashScreen.route: (BuildContext context) => const SplashScreen(),
-        EventScreen.route: (BuildContext context) => EventScreen(),
+        EventScreen.route: (BuildContext context) => const EventScreen(),
       },
     );
   }

@@ -32,7 +32,7 @@ class ProductListElement extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 getProductTitleAndSubtitle.first,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -43,7 +43,7 @@ class ProductListElement extends StatelessWidget {
                   getProductTitleAndSubtitle.last,
                   style: Theme.of(context)
                       .textTheme
-                      .caption!
+                      .bodySmall!
                       .copyWith(fontSize: 16.0),
                   textAlign: TextAlign.center,
                 ),
@@ -63,8 +63,9 @@ class ProductListElement extends StatelessWidget {
     List<String> subtitleLines = title.split("_");
     subtitleLines.removeAt(0);
     String? subtitle;
-    if (subtitleLines.isNotEmpty)
+    if (subtitleLines.isNotEmpty) {
       subtitle = subtitleLines.reduce((value, element) => "$value\n$element");
+    }
 
     title = title.split("_").first;
 
@@ -118,7 +119,7 @@ class ProductListElement extends StatelessWidget {
                       Text(getProductTitleAndSubtitle.first,
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .headlineSmall!
                               .copyWith(color: Colors.white)),
                       if (getProductTitleAndSubtitle.length > 1)
                         Padding(
@@ -127,7 +128,7 @@ class ProductListElement extends StatelessWidget {
                             getProductTitleAndSubtitle.last,
                             style: Theme.of(context)
                                 .textTheme
-                                .caption!
+                                .bodySmall!
                                 .copyWith(fontSize: 16.0, color: Colors.white),
                           ),
                         ),

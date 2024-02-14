@@ -21,6 +21,7 @@ class GalleryListElement extends StatelessWidget {
             alignment: AlignmentDirectional.bottomCenter,
             child: Container(
               width: double.infinity,
+              color: Colors.black.withOpacity(0.4),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -37,7 +38,6 @@ class GalleryListElement extends StatelessWidget {
                   ],
                 ),
               ),
-              color: Colors.black.withOpacity(0.4),
             ),
           ),
         ],

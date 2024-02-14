@@ -28,7 +28,7 @@ class ProductsPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
                 child: Text(
                   References.products.entries.elementAt(typeIndex).key,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
               const Divider(thickness: 2.0, indent: 16.0, endIndent: 16.0),

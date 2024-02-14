@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
           else
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: AspectRatio(
                   aspectRatio: 12 / 7,
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                 Text("ORLER TV - LIVE Streaming", style: hintTextStyle.copyWith(fontWeight: FontWeight.bold)),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24.0),
-                  child: Text("Canale 144 del Digitale Terrestre", style: hintTextStyle),
+                  child: Text("Canale 166 del Digitale Terrestre", style: hintTextStyle),
                 ),
                 const Text("Canale 867 di Sky", style: hintTextStyle),
               ],

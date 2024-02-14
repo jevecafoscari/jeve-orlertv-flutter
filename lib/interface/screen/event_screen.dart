@@ -4,17 +4,27 @@ import 'package:jeve_orlertv_flutter/assets.dart';
 import 'package:jeve_orlertv_flutter/models/event_model.dart';
 import 'package:flutter_html/flutter_html.dart';
 
-class EventScreen extends StatelessWidget {
+class EventScreen extends StatefulWidget {
   static const String route = "/eventScreen";
 
-  late final EventModel event;
+  const EventScreen({Key? key}) : super(key: key);
 
-  EventScreen({Key? key}) : super(key: key);
+  @override
+  State<EventScreen> createState() => _EventScreenState();
+}
+
+class _EventScreenState extends State<EventScreen> {
+  late EventModel event;
 
   @override
   Widget build(BuildContext context) {
     event = ModalRoute.of(context)!.settings.arguments as EventModel;
 
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: _buildBody(context),
