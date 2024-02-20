@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jeve_orlertv_flutter/interface/widget/product_list_element.dart';
 import 'package:jeve_orlertv_flutter/interface/widget/program_list_element.dart';
 import 'package:jeve_orlertv_flutter/references.dart';
 
@@ -17,7 +16,7 @@ class ProgrammingPage extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
             child: Text(
               References.programming.entries.elementAt(typeIndex).key,
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           const SizedBox(height: 8.0),

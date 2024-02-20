@@ -23,19 +23,19 @@ class ProgramListElement extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
-                child: Text(program.time, style: TextStyle(fontWeight: FontWeight.w500)),
+                child: Text(program.time, style: const TextStyle(fontWeight: FontWeight.w500)),
               ),
-              Spacer(),
-              Center(child: Text(program.title, style: TextStyle(fontWeight: FontWeight.bold))),
-              Spacer(),
+              const Spacer(),
+              Center(child: Text(program.title, style: const TextStyle(fontWeight: FontWeight.bold))),
+              const Spacer(),
               Container(
-                decoration: BoxDecoration(gradient: References.appBarGradient),
+                decoration: const BoxDecoration(gradient: References.appBarGradient),
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       program.type,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
                 ),

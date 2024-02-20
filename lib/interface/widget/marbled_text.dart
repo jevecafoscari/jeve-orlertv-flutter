@@ -16,7 +16,7 @@ class MarbledText extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Text(
             text,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
       ),
