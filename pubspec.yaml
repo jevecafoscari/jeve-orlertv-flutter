@@ -5,7 +5,7 @@ description: Progetto per l'app Orler TV.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
-version: 0.3.0+14
+version: 0.3.2+15
 
 
 environment:
@@ -25,13 +25,15 @@ dependencies:
   path_provider: ^2.0.11
   wordpress_api:
     path: ../dart-wp
-  html: ^0.15.0
-  flutter_html: ^2.2.1
+  html: ^0.15.4
+  flutter_html: ^3.0.0-beta.2
   wakelock: ^0.6.2
 
   # Grafica
   cupertino_icons: ^1.0.5
-  new_gradient_app_bar: ^0.2.0
+  new_gradient_app_bar:
+    git:
+      url: https://github.com/emiliodallatorre/NewGradientAppBar
   # google_fonts: ^2.1.0
   swatcher: ^0.1.0
   cached_network_image: ^3.2.1

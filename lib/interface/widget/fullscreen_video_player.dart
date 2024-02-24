@@ -12,7 +12,7 @@ class FullscreenVideoPlayer extends StatefulWidget {
 }
 
 class _FullscreenVideoPlayerState extends State<FullscreenVideoPlayer> {
-  final VideoPlayerController videoPlayerController = VideoPlayerController.network(References.streamUrl);
+  final VideoPlayerController videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(References.streamUrl));
 
   bool initialized = false;
 

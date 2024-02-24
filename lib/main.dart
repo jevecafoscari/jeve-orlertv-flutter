@@ -20,6 +20,7 @@ class OrlerTV extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Swatcher.createMaterialColor(References.orlerBlue),
         fontFamily: "Montserrat",
+        useMaterial3: false,
       ),
       initialRoute: SplashScreen.route,
       routes: <String, Widget Function(BuildContext)>{

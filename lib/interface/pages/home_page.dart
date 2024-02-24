@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final VideoPlayerController videoPlayerController = VideoPlayerController.network(References.streamUrl);
+  final VideoPlayerController videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(References.streamUrl));
 
   bool initializedVideo = false;
   bool isConnected = false;
